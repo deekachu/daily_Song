@@ -1,21 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Today’s Video</title>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
-  <script src="videos.js"></script>
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <title>The Gift of Music.</title>
+  <script>
+    const videos = [
+      "https://youtu.be/yfzsBA5dZdE?si=BZgDzHHJw7CaqihR",
+	  "https://youtu.be/e426CnY0aP8?si=dwFgn5bWQQ9xTopR",
+"https://youtu.be/H8skBtGbi6U?si=wPhkwHVksonl3g-Y",
+"https://youtu.be/BLS26GU7QXc?si=MjRWapnZsfD-8Dre",
+"https://youtu.be/0YDJV8BtQgw?si=3qdV3_d2fL5jyOJ-",
+"https://youtu.be/GnEmD17kYsE?si=wpMex_y90bZ7-u96",
+"https://youtu.be/nfVIkt0La50?si=0V0NYhLUv4owwFBl",
+"https://youtu.be/jRqmDKlUAwE?si=q1pEgyiE9wpMU1Oq",
+"https://youtu.be/_tLb4eiU61Y?si=RcvGVSa3yzsi2bqz",
+"https://youtu.be/SJERE92z8PY?si=zrAvKXOpSbEkkjyr",
+"https://youtu.be/GEbaic1zCtk?si=_6z7e6YbOOgqezkA",
+"https://youtu.be/-wDSwAYVu3Y?si=nPOeqIvoooxB84On",
+"https://youtu.be/6qClbCHbbc0?si=N7qSCGzx1aW6CdjN",
+"https://youtu.be/N8NSZhTPAwk?si=sCrKR_Ay7dhPE_6f",
+"https://youtu.be/kzdIrGR3vhs?si=RP30iymq8x3ObgVy",
+"https://youtu.be/kfslSwwvo3U?si=LU415tZgl2fRvgO0",
+"https://youtu.be/RjF3TmrxUMs?si=scyzPrWe6IdIH--G",
+"https://youtu.be/nm3Ml1eMlqk?si=XOim-YmmZwUtb5N0",
+"https://youtu.be/8_udwNd-0Kk?si=TAVFEHjI26XUAhNV",
+"https://youtu.be/t30V-QGazwY?si=riyrC_z0ax36z_Gc",
+"https://youtu.be/aLKCJ_JzLnU?si=be_MyfSNkclYsQkP",
+"https://youtu.be/4whD6uAryMs?si=DbA_3aVMHgtN3Q_q",
+"https://youtu.be/3HuEjdZG2AU?si=gs7GfON2wD2Vdmki",
+"https://youtu.be/onp73T-bWzg?si=jTJreEYLvu0ltMIZ",
+"https://youtu.be/9bOjc70f4p8?si=zoL8v-VC_JjWVVHT",
+"https://youtu.be/6ydpSVvXE9k?si=5J-RDUX3fQVwKPMK",
+"https://youtu.be/ZcFj7vJ9KJE?si=RNHkUhyifbQiGWfC",
+"https://youtu.be/u4tGoEakbvU?si=y9pQF2nq8Cc3sHW5",
+"https://youtu.be/h6BemM93MJ4?si=ConuIWbw3fEMUXcB",
+"https://youtu.be/z8M8YZj71NM?si=4TcJwTdUB2ZJ2d3p",
+"https://youtu.be/bsneH0mOq-0?si=4os1XwZaFRpwiRDF",
+"https://youtu.be/YZzqDSBluCc?si=XYJ6aWheQcDGGEx7",
+"https://youtu.be/SHVzWMFMH6Y?si=RkizuQZWsvOKVQ4U",
+"https://youtu.be/M3C5AxR7DWg?si=6QCK8pksh93_OR2T",
+"https://youtu.be/gPjPb3nNprg?si=I-d6btu-gABhGqXT",
+"https://youtu.be/b-yvPKZF_xs?si=6FRTc3ymC-pj-U7b",
+"https://youtu.be/E3DwWhV6Ps8?si=G4jRl2p6gsEH27nM",
+"https://youtu.be/Ut8MTBIZrC8?si=59VIA1tBVuRvsDwW",
+"https://youtu.be/GhKMVlHz9FQ?si=-ikHmqZG6oYc00qX",
+"https://youtu.be/zIr96EaA2ls?si=W9lS7_BUl2WH8wO9",
+"https://youtu.be/1Q3ub1SUYfg?si=2pj2xW69Bt-5fjfp",
+
+
+    ];
+
+    function playRandomVideo() {
+      const randomIndex = Math.floor(Math.random() * videos.length);
+      window.location.href = videos[randomIndex];
+    }
+  </script>
 </head>
-<body>
-  <h1 id="title"></h1>
-
-  <iframe id="video" width="560" height="315" allowfullscreen></iframe>
-
-  <h3>Rate this song</h3>
-  <div id="stars"></div>
-
-  <p><a href="leaderboard.html">View Leaderboard</a></p>
+<body onload="playRandomVideo()">
+  <p>Loading a random video...</p>
 </body>
 </html>
+
 
